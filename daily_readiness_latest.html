@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAIMS Daily Readiness Report</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            padding: 28px 32px;
+            border-radius: 12px;
+            margin-bottom: 28px;
+        }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+        .header p  { margin: 8px 0 0 0; font-size: 15px; opacity: 0.75; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-left: 4px solid #e2e8f0;
+        }
+        .card.green { border-left-color: #16a34a; }
+        .card.yellow { border-left-color: #d97706; }
+        .card.red { border-left-color: #dc2626; }
+        .card h3 { margin: 0 0 6px 0; font-size: 12px; text-transform: uppercase;
+                    letter-spacing: 0.05em; color: #64748b; }
+        .card .value { font-size: 40px; font-weight: 800; color: #1e293b; }
+        .card .sub   { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+        table {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-collapse: collapse;
+        }
+        th {
+            background: #1e293b;
+            color: white;
+            padding: 13px 16px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        td { padding: 11px 16px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8fafc; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        .badge-green  { background: #dcfce7; color: #166534; }
+        .badge-yellow { background: #fef9c3; color: #854d0e; }
+        .badge-red    { background: #fee2e2; color: #991b1b; }
+        .flag { font-size: 11px; color: #ef4444; }
+        .research-note {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> Daily Readiness Report</h1>
+        <p>Generated Wednesday, March 11, 2026 | Data as of 2026-03-05 | WAIMS-R Monitoring System</p>
+    </div>
+
+    <div class="summary-grid">
+        <div class="card green">
+            <h3>Ready — Full Training</h3>
+            <div class="value">0</div>
+            <div class="sub">Score ≥ 80</div>
+        </div>
+        <div class="card yellow">
+            <h3>Monitor — Modified Training</h3>
+            <div class="value">1</div>
+            <div class="sub">Score 60–79</div>
+        </div>
+        <div class="card red">
+            <h3>Protect — Intervention Needed</h3>
+            <div class="value">11</div>
+            <div class="sub">Score &lt; 60</div>
+        </div>
+        <div class="card">
+            <h3>Average Sleep</h3>
+            <div class="value">7.5</div>
+            <div class="sub">hrs (target 7.5+)</div>
+        </div>
+    </div>
+
+    <h2 style="margin: 0 0 16px 0; font-size: 18px;">Player Readiness Status</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Pos</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Score</th>
+                <th>Sleep</th>
+                <th>Soreness</th>
+                <th>Fatigue</th>
+                <th>CMJ (cm)</th>
+                <th>Flags</th>
+            </tr>
+        </thead>
+        <tbody>          <tr>
+              <td><strong>Player A</strong></td>
+              <td>G</td>
+              <td>Starter</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>53</strong>/100</td>
+              <td>7.5 h</td>
+              <td>7/10</td>
+              <td>6/10</td>
+              <td>40.5</td>
+              <td class="flag">⚠ High soreness</td>
+          </tr>          <tr>
+              <td><strong>Player C</strong></td>
+              <td>F</td>
+              <td>Starter</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>54.3</strong>/100</td>
+              <td>6.9 h</td>
+              <td>4/10</td>
+              <td>6/10</td>
+              <td>39.4</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player L</strong></td>
+              <td>F</td>
+              <td>Bench</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>56.6</strong>/100</td>
+              <td>7.7 h</td>
+              <td>4/10</td>
+              <td>6/10</td>
+              <td>31.9</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player E</strong></td>
+              <td>F</td>
+              <td>Rotation</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>57.1</strong>/100</td>
+              <td>7.4 h</td>
+              <td>5/10</td>
+              <td>3/10</td>
+              <td>33.6</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player F</strong></td>
+              <td>F</td>
+              <td>Rotation</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>57.1</strong>/100</td>
+              <td>7.5 h</td>
+              <td>2/10</td>
+              <td>4/10</td>
+              <td>32.1</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player I</strong></td>
+              <td>C</td>
+              <td>Bench</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>57.3</strong>/100</td>
+              <td>7.1 h</td>
+              <td>1/10</td>
+              <td>6/10</td>
+              <td>30.3</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player H</strong></td>
+              <td>G</td>
+              <td>Bench</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>57.8</strong>/100</td>
+              <td>7.4 h</td>
+              <td>4/10</td>
+              <td>6/10</td>
+              <td>34.1</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player J</strong></td>
+              <td>G</td>
+              <td>Bench</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>58.3</strong>/100</td>
+              <td>7.5 h</td>
+              <td>2/10</td>
+              <td>4/10</td>
+              <td>37.9</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player B</strong></td>
+              <td>G</td>
+              <td>Starter</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>58.6</strong>/100</td>
+              <td>6.7 h</td>
+              <td>3/10</td>
+              <td>5/10</td>
+              <td>39.5</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player D</strong></td>
+              <td>C</td>
+              <td>Starter</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>59.7</strong>/100</td>
+              <td>8.3 h</td>
+              <td>3/10</td>
+              <td>4/10</td>
+              <td>38.6</td>
+              <td class="flag"></td>
+          </tr>          <tr>
+              <td><strong>Player G</strong></td>
+              <td>G</td>
+              <td>Rotation</td>
+              <td><span class="badge badge-red">RED</span></td>
+              <td><strong>59.9</strong>/100</td>
+              <td>7.9 h</td>
+              <td>0/10</td>
+              <td>9/10</td>
+              <td>38.1</td>
+              <td class="flag">⚠ High fatigue</td>
+          </tr>          <tr>
+              <td><strong>Player K</strong></td>
+              <td>F</td>
+              <td>Bench</td>
+              <td><span class="badge badge-yellow">YELLOW</span></td>
+              <td><strong>60.3</strong>/100</td>
+              <td>7.6 h</td>
+              <td>3/10</td>
+              <td>3/10</td>
+              <td>34.3</td>
+              <td class="flag"></td>
+          </tr>        </tbody>
+    </table>
+
+    <div class="research-note">
+        <strong>Formula basis (aligned with WAIMS-Python):</strong>
+        Sleep 15pts (Watson 2020, Saw 2016) + Soreness 10pts + Mood 5pts + Fatigue 5pts
+        + CMJ 15pts (Cormack 2008, Labban 2024) + RSI 10pts (Bishop 2023)
+        + Schedule context 10pts + personal z-score modifier ±10pts. <br>
+        <strong>ACWR: contextual flag only</strong> — not included in score.
+        Impellizzeri et al. 2020 (BJSM) identified statistical coupling flaw;
+        2025 meta-analysis (22 cohort studies, I²>75%) recommends 'use with caution as a tool'.
+    </div>
+
+    <div class="footer">
+        WAIMS Monitoring System &nbsp;|&nbsp; Generated: 2026-03-11 15:47:47
+    </div>
+</body>
+</html>
